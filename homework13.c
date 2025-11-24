@@ -5,16 +5,16 @@
 
 int main() {
 
-    setlocale(LC_CTYPE, 'RUS');
+    setlocale(LC_CTYPE, "RUS");
 
     char str[1000];
 
-    printf("Ââåäèòå ñòðîêó: ");
+    printf("Введите строку: ");
     fgets(str, sizeof(str), stdin);
 
     size_t len = strlen(str);
     if (len > 0 && str[len - 1] == '\n') str[len - 1] = '\0';
-    printf("Èñõîäíàÿ ñòðîêà: %s\n", str);
+    printf("Исходная строка: %s\n", str);
 
 
     int space_flag = 0; 
@@ -33,9 +33,10 @@ int main() {
     }
     str[j] = '\0';
 
-    printf("Ðåçóëüòàò: \"%s\"\n", str);
+    printf("Результат: \"%s\"\n", str);
 
     return 0;
 
 
 }
+
